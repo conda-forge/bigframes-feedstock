@@ -1,5 +1,5 @@
 {% set name = "bigframes" %}
-{% set version = "1.31.0" %}
+{% set version = "1.32.0" %}
 {% set python_min = "3.10" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/bigframes-{{ version }}.tar.gz
-  sha256: b888f20d6844d241ebd5a40f88c0897850bd4b3b876f391494c6d2e848db2209
+  sha256: 5b6f2e4c08050d5e6698771462084cc005071ebb2cdff9c705deda87718a5b4f
 
 build:
   noarch: python
