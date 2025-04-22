@@ -3,10 +3,10 @@ schema_version: 1
 
 context:
   name: bigframes
-  version: 2.0.0
-  python_min: 3.9
-  python_max: 4.0
-  python_test_max: 3.13
+  version: "2.1.0"
+  python_min: '3.9'
+  python_max: '4.0'
+  python_test_max: '3.13'
 
 package:
   name: ${{ name|lower }}
@@ -14,10 +14,10 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/bigframes-${{ version }}.tar.gz
-  sha256: 98c6875814a49b8314867dedd4669e5350bac19eac98e7078f2df2adee99e171
+  sha256: 35c3d0fee09467a10470a2b2185698f55725dbf790c915fb6a6897b93232d1bb
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-check
 
