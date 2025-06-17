@@ -3,7 +3,7 @@ schema_version: 1
 
 context:
   name: bigframes
-  version: "2.6.0"
+  version: "2.7.0"
   python_min: '3.9'
   python_max: '4.0'
   python_test_max: '3.13'
@@ -14,7 +14,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/bigframes-${{ version }}.tar.gz
-  sha256: 03b91cefd9e1df9121e13d7574314071180549cf64c9e533acae7f50e861c4cf
+  sha256: 5de6bd488f8b7b97d7e25a0781db66ec09371c2b133c0381bbfcda78143f42cb
 
 build:
   number: 0
