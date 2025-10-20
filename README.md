@@ -3,9 +3,9 @@ About bigframes-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/bigframes-feedstock/blob/main/LICENSE.txt)
 
-Home: https://cloud.google.com/python/docs/reference/bigframes/latest
+Home: https://github.com/googleapis/python-bigquery-dataframes
 
-Package license: BSD-3-Clause AND MIT AND MPL-2.0 AND BSD-4-Clause AND Apache-2.0
+Package license: MIT AND BSD-4-Clause AND BSD-3-Clause AND Apache-2.0 AND MPL-2.0
 
 Summary: BigQuery DataFrames -- scalable analytics and machine learning with BigQuery
 
