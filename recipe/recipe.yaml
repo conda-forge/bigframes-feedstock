@@ -28,18 +28,14 @@ requirements:
     - pip
   run:
     - python >=${{ python_min }},<=${{ python_max }}
+    # https://github.com/googleapis/google-cloud-python/blob/main/packages/bigframes/setup.py
     - cloudpickle >=2.0.0
     - fsspec >=2023.3.0
-    - gcsfs >=2023.3.0,!=2025.5.0
+    - gcsfs >=2023.3.0,!=2025.5.0,!=2026.2.0,!=2026.3.0
     - geopandas >=0.12.2
     - google-auth >=2.15.0,<3.0
+    # "google-cloud-bigquery[bqstorage,pandas] >=3.36.0",
     - google-cloud-bigquery-core >=3.36.0
-    - google-cloud-bigquery-storage >=2.30.0,<3.0.0
-    - google-cloud-functions >=1.12.0
-    - google-cloud-bigquery-connection >=1.12.0
-    - google-cloud-resource-manager >=1.10.3
-    - google-cloud-storage >=2.0.0
-    - grpc-google-iam-v1 >=0.14.2
     - numpy >=1.24.0
     - pandas >=1.5.3
     - pandas-gbq >=0.26.1
@@ -47,12 +43,14 @@ requirements:
     - pydata-google-auth >=1.8.2
     - requests >=2.27.1
     - shapely >=1.8.5
-    - sqlglot >=25.20.0,<28.0.0
+    #- sqlglot >=25.20.0,<28.0.0 # Check
     - tabulate >=0.9
-    - ipywidgets >=7.7.1
+    #- ipywidgets >=7.7.1  # Check
     - humanize >=4.6.0
     - matplotlib-base >=3.7.1
     - db-dtypes >=1.4.2
+    - pyiceberg >= 0.7.1
+    # For vendored ibis-framework.
     - atpublic >=2.3,<6
     - python-dateutil >=2.8.2,<3
     - pytz >=2022.7
@@ -77,8 +75,8 @@ tests:
 
 about:
   summary: BigQuery DataFrames -- scalable analytics and machine learning with BigQuery
-  repository: https://github.com/googleapis/python-bigquery-dataframes
-  homepage: https://github.com/googleapis/python-bigquery-dataframes
+  repository: https://github.com/googleapis/google-cloud-python/tree/main/packages/bigframes
+  homepage: https://pypi.org/project/bigframes
   description: |
     BigQuery DataFrames provides a Pythonic DataFrame and machine learning (ML) API powered by the BigQuery engine.
       bigframes.pandas provides a pandas-compatible API for analytics.
