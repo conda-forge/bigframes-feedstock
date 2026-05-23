@@ -3,13 +3,13 @@ About bigframes-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/bigframes-feedstock/blob/main/LICENSE.txt)
 
-Home: https://github.com/googleapis/python-bigquery-dataframes
+Home: https://pypi.org/project/bigframes
 
 Package license: MIT AND BSD-4-Clause AND MPL-2.0 AND Apache-2.0 AND BSD-3-Clause
 
 Summary: BigQuery DataFrames -- scalable analytics and machine learning with BigQuery
 
-Development: https://github.com/googleapis/python-bigquery-dataframes
+Development: https://github.com/googleapis/google-cloud-python/tree/main/packages/bigframes
 
 BigQuery DataFrames provides a Pythonic DataFrame and machine learning (ML) API powered by the BigQuery engine.
   bigframes.pandas provides a pandas-compatible API for analytics.
@@ -19,11 +19,10 @@ Current build status
 ====================
 
 
-<table><tr><td>All platforms:</td>
+<table><tr>
+    <td>All platforms:</td>
     <td>
-      <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=20298&branchName=main">
-        <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/bigframes-feedstock?branchName=main">
-      </a>
+      <img src="https://img.shields.io/badge/noarch-disabled-lightgrey.svg" alt="noarch disabled">
     </td>
   </tr>
 </table>
