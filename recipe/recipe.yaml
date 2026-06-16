@@ -3,7 +3,7 @@ schema_version: 1
 
 context:
   name: bigframes
-  version: "2.42.0"
+  version: 2.43.0
   python_min: '3.10'
   python_max: '4.0'
   python_test_max: '3.14'
@@ -14,7 +14,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/bigframes-${{ version }}.tar.gz
-  sha256: b578a0771fc5f9c77005313dd454f72989ef8a40e70d11b6f77935f5a7fd0f07
+  sha256: da7c234b46f3e22f5327b5b8bae809fa740bc79ceef15cf7a8213578bb03a5f5
 
 build:
   number: 0
@@ -28,15 +28,12 @@ requirements:
     - pip
   run:
     - python >=${{ python_min }},<${{ python_max }}
-    # https://github.com/googleapis/google-cloud-python/blob/main/packages/bigframes/setup.py
     - cloudpickle >=2.0.0
     - fsspec >=2023.3.0
     - gcsfs >=2023.3.0,!=2025.5.0,!=2026.2.0,!=2026.3.0
     - geopandas >=0.12.2
     - google-auth >=2.15.0,<3.0
-    # "google-cloud-bigquery[bqstorage,pandas] >=3.36.0",
     - google-cloud-bigquery-core >=3.36.0
-    # 2.30 needed for arrow support.
     - google-cloud-bigquery-storage >=2.30.0,<3.0.0
     - google-cloud-functions >=1.12.0
     - google-cloud-bigquery-connection >=1.12.0
@@ -47,25 +44,21 @@ requirements:
     - numpy >=1.24.0
     - pandas >=1.5.3
     - pandas-gbq >=0.26.1
-    - pyarrow >=15.0.2
+    - pyarrow >=23.0.1
     - pydata-google-auth >=1.8.2
     - requests >=2.27.1
     - shapely >=1.8.5
-    #- sqlglot >=25.20.0,<28.0.0 # Check
     - tabulate >=0.9
-    #- ipywidgets >=7.7.1  # Check
     - humanize >=4.6.0
     - matplotlib-base >=3.7.1
     - db-dtypes >=1.4.2
     - pyiceberg >=0.7.1
-    # For vendored ibis-framework.
     - atpublic >=2.3,<6
     - python-dateutil >=2.8.2,<3
     - pytz >=2022.7
     - toolz >=0.11,<2
     - typing_extensions >=4.5.0,<5
     - rich >=12.4.4,<14
-
 tests:
   - python:
       imports:
