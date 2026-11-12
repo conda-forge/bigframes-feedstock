@@ -3,7 +3,7 @@ schema_version: 1
 
 context:
   name: bigframes
-  version: 2.52.0
+  version: 2.53.0
   python_min: '3.10'
   python_max: '4.0'
   python_test_max: '3.14'
@@ -14,7 +14,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/bigframes-${{ version }}.tar.gz
-  sha256: 3d4bb80284d63510b26a469b2e35d8ba50ef32e516de3d47b57c6f595f565f53
+  sha256: 017bc4c35699342c7bc97ed98f499eaef76a41f9dcd57ad421c5e86ddd2c186c
 
 build:
   number: 0
@@ -28,36 +28,36 @@ requirements:
     - pip
   run:
     - python >=${{ python_min }},<${{ python_max }}
-    - cloudpickle >=2.0.0
+    - cloudpickle >=2.1.0
     - fsspec >=2023.3.0
     - gcsfs >=2023.3.0,!=2025.5.0,!=2026.2.0,!=2026.3.0
-    - geopandas >=0.12.2
-    - google-auth >=2.15.0,<3.0
-    - google-cloud-bigquery-core >=3.42.0
-    - google-cloud-bigquery-storage >=2.30.0,<3.0.0
-    - google-cloud-functions >=1.20.2
-    - google-cloud-bigquery-connection >=1.18.2
-    - google-cloud-resource-manager >=1.14.2
+    - geopandas >=1.0.0
+    - google-auth >=2.56.3,<3.0
+    - google-cloud-bigquery-core >=3.47.0
+    - google-cloud-bigquery-storage >=2.43.0,<3.0.0
+    - google-cloud-functions >=1.25.0
+    - google-cloud-bigquery-connection >=1.23.0
+    - google-cloud-resource-manager >=1.19.0
     - google-cloud-storage >=2.0.0
-    - google-crc32c >=1.0.0,<2.0.0
-    - grpc-google-iam-v1 >=0.14.2
-    - numpy >=1.24.0
+    - google-crc32c >=1.8.0,<2.0.0
+    - grpc-google-iam-v1 >=0.14.6
+    - numpy >=1.24.1
     - pandas >=1.5.3
     - pandas-gbq >=0.26.1
     - pyarrow >=23.0.1
-    - pydata-google-auth >=1.8.2
-    - requests >=2.27.1
-    - shapely >=1.8.5
+    - pydata-google-auth >=1.9.1
+    - requests >=2.34.2
+    - shapely >=2.0.0
     - tabulate >=0.9
     - humanize >=4.6.0
     - matplotlib-base >=3.7.1
-    - db-dtypes >=1.4.2
-    - atpublic >=2.3,<6
+    - db-dtypes >=1.9.0
+    - atpublic >=5.1,<6
     - python-dateutil >=2.8.2,<3
     - pytz >=2022.7
     - toolz >=0.11,<2
-    - typing_extensions >=4.5.0,<5
-    - rich >=12.4.4,<14
+    - typing_extensions >=4.6.1,<5
+    - rich >=13.9.4,<14
 tests:
   - python:
       imports:
